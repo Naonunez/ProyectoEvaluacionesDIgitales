@@ -10,7 +10,7 @@ public class Main {
         while (true) {
             System.out.println("Menú:");
             System.out.println("1) Inserción de alumno y notas");
-            
+            System.out.println("2) Mostrar alumnos registrados con su curso y nota final");
             System.out.println("3) Salir");
             System.out.print("Ingrese su opción: ");
             int opcion = Integer.parseInt(br.readLine());
@@ -20,7 +20,7 @@ public class Main {
                     insertarAlumnoYNotas(alumnosPorCurso, br);
                     break;
                 case 2:
-                    
+                    mostrarAlumnosConCursoYNotaFinal(alumnosPorCurso);
                     break;
                 case 3:
                     System.out.println("Saliendo del programa.");
@@ -65,6 +65,16 @@ public class Main {
 
         alumnosPorCurso.computeIfAbsent(nombreCurso, k -> new ArrayList<>()).add(alumno);
     }
+    private static void mostrarAlumnosConCursoYNotaFinal(HashMap<String, ArrayList<Alumno>> alumnosPorCurso) {
+      for (String curso : alumnosPorCurso.keySet()) {
+        for (Alumno alumno : alumnosPorCurso.get(curso)) {
+            System.out.println("-----------------");
+            System.out.println("Alumno: " + alumno.getNombre());
+            System.out.println("Curso: " + alumno.getCurso().getNombre() + " - Nota final: " + alumno.obtenerPromedio());
+            System.out.println("-----------------");
+        }
+      }  
+    } 
 
     
 }
