@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         HashMap<String, ArrayList<Alumno>> alumnosPorCurso = new HashMap<>();
+        inicializarDatos(alumnosPorCurso);
 
         while (true) {
             System.out.println("Menú:");
@@ -30,6 +31,25 @@ public class Main {
                     break;
             }
         }
+    }
+
+    private static void inicializarDatos(HashMap<String, ArrayList<Alumno>> alumnosPorCurso) {
+        ArrayList<Alumno> alumnos = new ArrayList<>();
+
+        // Agregar alumnos y notas
+        Curso curso1 = new Curso("Matemáticas");
+        Alumno alumno1 = new Alumno("Juan", curso1);
+        alumno1.ingresarNota("Matemáticas", 6.5);
+        alumno1.ingresarNota("Física", 7.2);
+        alumnos.add(alumno1);
+
+        Curso curso2 = new Curso("Historia");
+        Alumno alumno2 = new Alumno("María", curso2);
+        alumno2.ingresarNota("Historia", 5.8);
+        alumnos.add(alumno2);
+
+        // Agregar alumnos a la estructura de datos
+        alumnosPorCurso.put("Matemáticas", alumnos);
     }
 
     private static void insertarAlumnoYNotas(HashMap<String, ArrayList<Alumno>> alumnosPorCurso, BufferedReader br) throws IOException {
