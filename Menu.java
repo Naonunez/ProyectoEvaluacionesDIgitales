@@ -26,27 +26,25 @@ public class Menu {
     colegio.datosIniciales();
     while(true){
 
-      System.out.println("╔══════════════════════════════════════════════════╗");
-      System.out.println("║                      Opciones                    ║");
-      System.out.println("╠══════════════════════════════════════════════════╣");
-      System.out.println("║ [1]. Añadir Evaluación                           ║");
-      System.out.println("║ [2]. Añadir Pregunta                             ║");
-      System.out.println("║ [3]. Añadir Nota                                 ║");
-      System.out.println("║ [4]. Borrar Evaluación                           ║");
-      System.out.println("║ [5]. Borrar Pregunta                             ║");
-      System.out.println("║ [6]. Borrar Nota                                 ║");
-      System.out.println("║ [7]. Cambiar Evaluación                          ║");
-      System.out.println("║ [8]. Cambiar Pregunta                            ║");
-      System.out.println("║ [9]. Ver Todas las Evaluaciones                  ║");
-      System.out.println("║[10]. Ver Todas las Evaluaciones de una Asignatura║");
-      System.out.println("║[11]. Ver una Evaluación                          ║");
-      System.out.println("║[12]. Ver Todas Preguntas                         ║");
-      System.out.println("║[13]. Ver Todas las Notas                         ║");
-      System.out.println("║[14]. Generar Reporte                             ║");
-      System.out.println("║ [0]. Salir                                       ║");
-      System.out.println("╚══════════════════════════════════════════════════╝");
-
       System.out.println("");
+      System.out.println("|                      Opciones                    |");
+      System.out.println("||");
+      System.out.println("| [1]. Anadir Evaluacion                           |");
+      System.out.println("| [2]. Anadir Pregunta                             |");
+      System.out.println("| [3]. Anadir Nota                                 |");
+      System.out.println("| [4]. Borrar Evaluacion                           |");
+      System.out.println("| [5]. Borrar Pregunta                             |");
+      System.out.println("| [6]. Borrar Nota                                 |");
+      System.out.println("| [7]. Cambiar Evaluacion                          |");
+      System.out.println("| [8]. Cambiar Pregunta                            |");
+      System.out.println("| [9]. Ver Todas las Evaluaciones                  |");
+      System.out.println("|[10]. Ver Todas las Evaluaciones de una Asignatura|");
+      System.out.println("|[11]. Ver una Evaluacion                          |");
+      System.out.println("|[12]. Ver Todas Preguntas                         |");
+      System.out.println("|[13]. Ver Todas las Notas                         |");
+      System.out.println("|[14]. Generar Reporte                             |");
+      System.out.println("| [0]. Salir                                       |");
+      System.out.println("||");
 
 
       int opcion = 0;
